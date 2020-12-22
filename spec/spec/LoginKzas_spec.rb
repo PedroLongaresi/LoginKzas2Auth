@@ -14,7 +14,7 @@ describe "Sistema de Login", :testelogin do
     it "Senha Errada" do      
         expect(page.title).to eql "Kzas | Central"
         fill_in list[:mail], with: 'pedro@kzas.ai'
-        fill_in 'password', with: '1234567'
+        fill_in 'password', with: '1234567' #FAKEPASSWORD
         click_button 'Acessar'
         sleep 1
         find(:css, '.swal-title').text eq('Erro')
@@ -27,7 +27,7 @@ describe "Sistema de Login", :testelogin do
     it "Senha Correta com Codigo Errado" do
         expect(page.title).to eql "Kzas | Central"
         fill_in list[:mail], with: 'pedro@kzas.ai'
-        fill_in 'password', with: '123456'
+        fill_in 'password', with: '123456' #FAKEPASSWORD
         click_button 'Acessar'
         sleep 1
         find(:css, '.swal-text').text eq('Por favor, informe o token enviado para seu whatsapp')
@@ -43,7 +43,7 @@ describe "Sistema de Login", :testelogin do
     it "Login correto" do
         expect(page.title).to eql "Kzas | Central"
         fill_in list[:mail], with: 'pedro@kzas.ai'
-        fill_in 'password', with: '123456'
+        fill_in 'password', with: '123456' #FAKEPASSWORD
         click_button 'Acessar'
         sleep 2
         find(:css, '.swal-text').text eq('Por favor, informe o token enviado para seu whatsapp')
