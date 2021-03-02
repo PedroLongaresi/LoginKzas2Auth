@@ -1,7 +1,7 @@
 require "dbi"
 require 'mysql2'
 
-def ConnectBancoDados(codigo)
+def connectBancoDados(codigo)
     begin
         # Initialize connection variables.
         host = String('HOST')      #ANONIMIZADO CUIDADO PARA NAO COLOCAR E PUBLICAR
