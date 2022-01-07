@@ -11,7 +11,7 @@ describe "Sistema de Login", :testelogin do
         puts "Dois"
     end
 
-    it "Senha Errada" do      
+    it "Senha Errada" do
         expect(page.title).to eql "Kzas | Central"
         fill_in list[:mail], with: 'pedro@kzas.ai'
         fill_in 'password', with: '1234567' #FAKEPASSWORD
@@ -47,7 +47,7 @@ describe "Sistema de Login", :testelogin do
         click_button 'Acessar'
         sleep 2
         find(:css, '.swal-text').text eq('Por favor, informe o token enviado para seu whatsapp')
-        cod = connectBancoDados("+5516980")  
+        cod = connectBancoDados("+5516980")
         find(:css, '.swal-content__input').send_keys(cod[0])
         sleep 1
         click_button 'VALIDAR'
